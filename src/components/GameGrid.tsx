@@ -14,7 +14,7 @@ const GameGrid = () => {
     const [games, setGames] = useState<Game[]>([]);
     const [error, setError] = useState('');
 
-    useEffect(() => {
+    useEffect(() => { 
         apiClient.get<FetchGamesResponse>('/games')
         .then(res => setGames(res.data.results))
         .catch(error => setError(error.message));
