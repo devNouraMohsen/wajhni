@@ -19,7 +19,7 @@ const TopBanner: React.FC = () => {
             as="h1"
             size="2xl"
             fontFamily="'Baloo Bhaijaan 2', cursive"
-            color="#bd7b58"
+            color="#d4ccbc"
             paddingBottom={'40px'}
           >
             وجهني
@@ -28,7 +28,7 @@ const TopBanner: React.FC = () => {
             as="h1"
             size="2xl"
             fontFamily="'Baloo Bhaijaan 2', cursive"
-            color='#e4dccc'
+            color='#f3dbd3'
           >
             دليلك للمتاجر
           </Heading>
