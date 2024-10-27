@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Scheherazade+New&display=swap');
+
+
+.CategoryIcon{
+    height: 100px;
+    width: 100px;
+    
+    
+    
+    
+}
+.CategoryCard{
+    width: '18rem';
+    box-shadow: 1px 1px 8px 0 #819880;
+    padding: 60px 30px 60px 30px;
+    margin: 6px 6px 6px 6px;
+    height: 22rem;
+    border-radius: 6px;
+}
+
+
+
+
+.CategoryCard:hover{
+    width: '18rem';
+    box-shadow: 1px 1px 16px 0 #ddbea9;
+    padding: 60px 30px 60px 30px;
+    margin: 6px 6px 6px 6px;
+    height: 22rem;
+
+}
+
+.CategoryName{
+    color: #3b6444;
+    margin-top: 1rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.CategoryDisc{
+    color: #a5a58d;
+    margin-top: 1rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.TiltleStyle{
+    background-color: #bd7b58;
+    height: 3px;
+    width: 100px;
+    margin: -1.9rem auto 0;
+    margin-bottom: 3rem;
+}
+
+.CategoryMainTitle{
+    color: #bd7b58;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}

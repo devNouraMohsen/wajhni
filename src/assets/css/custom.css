@@ -1,0 +1,14 @@
+
+
+.topFixedBanner {
+  background-image: url("./HeaderBG.png");
+  height: 670px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+.topContent {
+  padding-top: 10em;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
