@@ -1,13 +1,15 @@
 // src/components/TopBanner.tsx
 import React from 'react';
 import { Box, Container, Heading } from '@chakra-ui/react';
-import HeaderBG from '../assets/HeaderBG.png'
+import HeaderBG from '../assets/HeaderBG.png';
+
 const TopBanner: React.FC = () => {
   return (
-  
     <Box
       bgAttachment="fixed"
-      bgImg={HeaderBG}
+      bgImage={`url(${HeaderBG})`} // استخدام bgImage بدلاً من bgImg
+      bgRepeat="no-repeat" // عدم تكرار الخلفية
+      bgSize="cover" // تغطية كامل المكون
       height="50vh" // ارتفاع المكون
       display="flex"
       alignItems="center"

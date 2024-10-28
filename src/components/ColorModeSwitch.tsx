@@ -6,6 +6,7 @@ const ColorModeSwitch = () => {
     
     useEffect(() => {
         document.body.style.backgroundColor = colorMode === 'dark' ? '#e4dccc' : '#eed5c5';
+        document.body.style.color = colorMode === 'dark' ? 'black' : 'black'; // لون الخط الجديد
     }, [colorMode]);
 
     return (
@@ -15,7 +16,7 @@ const ColorModeSwitch = () => {
                 isChecked={colorMode === 'light'} 
                 onChange={toggleColorMode} 
             />
-            <Text color={'black'}>Change Background Color</Text>
+            <Text color={'inherit'}>Change Background Color</Text> {/* استخدام inherit للسماح بلون الخط المحدد */}
         </HStack>
     );
 }
