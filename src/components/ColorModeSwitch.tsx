@@ -16,7 +16,7 @@ const ColorModeSwitch = () => {
                 isChecked={colorMode === 'light'} 
                 onChange={toggleColorMode} 
             />
-            <Text color={'inherit'}>Change Background Color</Text> {/* استخدام inherit للسماح بلون الخط المحدد */}
+            <Text whiteSpace='nowrap' color={'inherit'}>Change Background Color</Text> {/* استخدام inherit للسماح بلون الخط المحدد */}
         </HStack>
     );
 }
