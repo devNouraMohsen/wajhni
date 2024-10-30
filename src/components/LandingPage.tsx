@@ -6,12 +6,14 @@ import HeaderBG from '../assets/HeaderBG.png';
 const LandingPage: React.FC = () => {
   return (
     <Box
-      bgAttachment="fixed"
-      backgroundImage={`url(${HeaderBG})`}
-      height="100vh" 
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
+        bgAttachment="fixed"
+        bgImage={`url(${HeaderBG})`} // استخدام bgImage بدلاً من bgImg
+        bgRepeat="no-repeat" // عدم تكرار الخلفية
+        bgSize="cover" // تغطية كامل المكون
+        height="50vh" // ارتفاع المكون
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
     >
       <Box textAlign="center" p={10}>
         <Heading as="h1" size="xl" mb={10} color="#bd7b58" fontFamily="'Baloo Bhaijaan 2', cursive">
