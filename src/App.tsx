@@ -7,7 +7,7 @@ import { Genre } from './components/services/hooks/useGenres'
 import PlatformIconList from './components/PlatformIconList'
 import platformSelector from './components/PlatformSelector';
 import PlatformSelector from './components/PlatformSelector'
-import { Platform } from './components/services/hooks/useGames'
+import { Platform } from './components/services/hooks/usePlatforms'
 import SortSelector from './components/SortSelector'
 import GameHeading from './components/GameHeading'
 

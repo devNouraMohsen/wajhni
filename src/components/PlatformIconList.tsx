@@ -1,5 +1,5 @@
 import {FaWindows, FaPlaystation, FaXbox, FaApple, FaLinux, FaAndroid} from 'react-icons/fa';
-import { Platform } from './services/hooks/useGames';
+import { Platform } from './services/hooks/usePlatforms';
 import { HStack, Icon } from '@chakra-ui/react';
 import {MdPhoneIphone} from 'react-icons/md';
 import {SiNintendo} from 'react-icons/si';

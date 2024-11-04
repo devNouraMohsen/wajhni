@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { FetchResponse } from '../api-client';
 import apiClient from '../api-client';
 
-interface Platform {
+export interface Platform {
     id: number;
     name: string;
     slug: string;
