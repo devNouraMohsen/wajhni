@@ -1,4 +1,4 @@
-import { Box, Button, SimpleGrid, Text } from "@chakra-ui/react"
+import { Box, Button, SimpleGrid, Spinner, Text } from "@chakra-ui/react"
 import useGames from "./services/hooks/useGames"
 import GameCard from "./GameCard";
 import GameCardSleleton from "./GameCardSleleton";
@@ -6,6 +6,7 @@ import GameCardContainer from "./GameCardContainer";
 import { GameQuery } from "../App";
 import { Fragment } from 'react';
 import React from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 interface Props {
   gameQuery: GameQuery
 }
@@ -14,44 +15,35 @@ const GameGrid = ({ gameQuery }: Props) => {
     const skeletones = [1, 2, 3, 4, 5, 6];
 
     if (error) return <Text>{error.message}</Text>
+    const fetchedGamesCount = data?.pages.reduce(
+      (total, page) => total + page.results.length,
+       0
+      ) || 0;
+
   return (
-      <Box  padding= '10px'>
-        <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 4}} spacing={6}>
-          {isLoading && 
-            skeletones.map ((Skeleton) => (
-              <GameCardContainer key={Skeleton}> 
-                <GameCardSleleton />
-              </GameCardContainer>
-            ))}
-          {data?.pages.map((page, index) => 
-            <React.Fragment key={index}> 
-              {page.results.map((game) => (
-                <GameCardContainer key={game.id}>
-                  <GameCard game={game} />
+        <InfiniteScroll 
+          dataLength={fetchedGamesCount}
+          hasMore={!!hasNextPage}
+          next={() => fetchNextPage()}
+          loader={<Spinner />}
+        >
+          <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 4}} padding= '10px' spacing={6}>
+            {isLoading && 
+              skeletones.map ((Skeleton) => (
+                <GameCardContainer key={Skeleton}> 
+                  <GameCardSleleton />
                 </GameCardContainer>
               ))}
-            </React.Fragment>)}
-        </SimpleGrid> 
-        {hasNextPage && (
-          <Button
-            margin={5}
-            variant="outline"
-            size="md"
-            borderColor={"#cbc0ac"}
-            textColor={"black"}
-            bg='#fff1e6'
-            sx={
-                { 
-                '&::placeholder': { 
-                color: 'gray.500'
-                }
-            }}
-           onClick={() => fetchNextPage()}
-          >
-            {isFetchingNextPage ? ' Loading ...' : 'Load More'}
-          </Button>
-        )}
-      </Box>
+            {data?.pages.map((page, index) => 
+              <React.Fragment key={index}> 
+                {page.results.map((game) => (
+                  <GameCardContainer key={game.id}>
+                    <GameCard game={game} />
+                  </GameCardContainer>
+                ))}
+              </React.Fragment>)}
+          </SimpleGrid> 
+        </InfiniteScroll>
   )
 }
 
