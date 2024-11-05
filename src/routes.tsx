@@ -5,6 +5,7 @@ import LandingPage from "./components/LandingPage";
 import GameDetailPage from "./pages/GameDetailPage";
 import TopBanner from "./components/TopBanner";
 import LandingLayout from "./pages/LandingLayout";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
     { path: '', element: <LandingLayout /> ,
@@ -16,9 +17,10 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
+        errorElement: <ErrorPage />,
         children: [
             { path: '/games' , element: <HomePage /> },
-            { path: 'games/:id' , element: <GameDetailPage /> }
+            { path: '/games/:id' , element: <GameDetailPage /> }
 
             
 
