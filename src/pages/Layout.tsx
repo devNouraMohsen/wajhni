@@ -2,7 +2,7 @@ import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import { Outlet } from 'react-router-dom'
 import TopBanner from '../components/TopBanner'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider } from '@chakra-ui/react'
 
 const Layout = () => {
   return (
@@ -10,7 +10,9 @@ const Layout = () => {
       <ChakraProvider>
         <TopBanner />
         <NavBar />
-        <Outlet />
+        <Box padding={5}>
+          <Outlet />
+        </Box>
         <Footer />
       </ChakraProvider>
        
