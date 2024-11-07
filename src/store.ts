@@ -7,7 +7,7 @@ interface GameQuery {
     searchText?: string;
 }
 
-interface GameQueryStore {
+export interface GameQueryStore {
     gameQuery: GameQuery;
     setSearchText: (searchText: string) => void;
     setGenreId: (genreId: number) => void;
