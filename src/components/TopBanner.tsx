@@ -7,10 +7,10 @@ const TopBanner: React.FC = () => {
   return (
     <Box
       bgAttachment="fixed"
-      bgImage={`url(${HeaderBG})`} // استخدام bgImage بدلاً من bgImg
-      bgRepeat="no-repeat" // عدم تكرار الخلفية
-      bgSize="cover" // تغطية كامل المكون
-      height="50vh" // ارتفاع المكون
+      bgImage={`url(${HeaderBG})`}
+      bgRepeat="no-repeat" 
+      bgSize="cover" 
+      height="50vh" 
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -24,7 +24,7 @@ const TopBanner: React.FC = () => {
             color="#d4ccbc"
             paddingBottom={'40px'}
           >
-            وجهني
+           Wajhni
           </Heading>
           <Heading
             as="h1"
@@ -32,7 +32,7 @@ const TopBanner: React.FC = () => {
             fontFamily="'Baloo Bhaijaan 2', cursive"
             color='#f3dbd3'
           >
-            دليلك للمتاجر
+            Help you 
           </Heading>
         </Box>
       </Container>

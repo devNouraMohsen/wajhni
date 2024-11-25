@@ -10,21 +10,20 @@ const Footer = () => {
       <Container  maxW="full" className="footerSection" p={5} bg="#ddbea9">
         <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={5}>
           <Box textAlign="center">
-            <Text fontSize="2xl" fontWeight="bold">من نحن</Text>
+            <Text fontSize="2xl" fontWeight="bold">About Us </Text>
             <Divider my={2} />
             <Text>
-              هي منصة تخدم العميل و التاجر بحيث تقوم بالسماح بالتجار بأن
-              يقوموا بعرض منتجاتهم و طرق التواصل و الوصول إليهم.
+            It is a platform that showcases various products and helps the customer to have a comprehensive view of different products.
             </Text>
-            <Text mt={4} fontWeight="bold">تـأسيس منـصة وجهــني</Text>
+            <Text mt={4} fontWeight="bold">Establishment of the Wajhni Platform.</Text>
             <Text>
-              تم إنشاء منصة وجهني تحت إدارة و إشراف{" "}
-              <span style={{ color: 'darkred' }}>شـركة تمكـين للتقنيـات</span>.
+               The Wajhni platform was established under the management and supervision of {" "}
+              <span style={{ color: 'darkred' }}>Tamkeen Technologies</span>.
             </Text>
           </Box>
           
           <Box textAlign="center">
-            <Text fontSize="2xl" fontWeight="bold">تواصل معنا</Text>
+            <Text fontSize="2xl" fontWeight="bold"> Contact Us</Text>
             <Box mt={4}>
               <Text>
                 <EmailIcon /> Wajhni@hotmail.com
@@ -35,7 +34,7 @@ const Footer = () => {
             </Box>
 
             <Box mt={4}>
-              <Text fontSize="xl" fontWeight="bold">تابعنا</Text>
+              <Text fontSize="xl" fontWeight="bold">Follow</Text>
               <Box display="flex" justifyContent="center" mt={2}>
                 <Link href="#" mx={2}><FaFacebook size="2em" /></Link>
                 <Link href="#" mx={2}><FaTwitter size="2em" /></Link>
