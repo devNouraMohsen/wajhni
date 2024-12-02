@@ -3,8 +3,22 @@ import { Box, Container, Grid, Text, Image, Divider, Link } from "@chakra-ui/rea
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import IconWajhni from '../assets/Wajhni.png';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import TermsAndConditionsDialog from "./TermsAndConditionsDialog";
+import { useState } from "react";
 
 const Footer = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const openDialog = (event: React.MouseEvent) => {
+    event.preventDefault();  
+    setIsDialogOpen(true);
+  };
+
+
+  const closeDialog = () => {
+    setIsDialogOpen(false); 
+  };
   return (
     <Fragment>
       <Container  maxW="full" className="footerSection" p={5} bg="#ddbea9">
@@ -42,6 +56,20 @@ const Footer = () => {
                 <Link href="#" mx={2}><FaYoutube size="2em" /></Link>
                 <Link href="#" mx={2}><FaLinkedin size="2em" /></Link>
               </Box>
+            </Box>
+            <Box mt={4}>
+              <Link 
+                fontSize="xl" 
+                fontWeight="bold" 
+                href="#" 
+                mt={2} 
+                onClick={openDialog}
+              >
+                Terms And conditions
+              </Link>
+
+           
+              <TermsAndConditionsDialog isOpen={isDialogOpen} onClose={closeDialog} />
             </Box>
           </Box>
 
