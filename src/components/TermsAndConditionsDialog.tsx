@@ -7,6 +7,8 @@ const TermsAndConditionsDialog = ({ isOpen, onClose }: { isOpen: boolean; onClos
   const handleAgree = () => {
     if (isChecked) {
       onClose();  
+    } else {
+      alert('You must agree to the terms and conditions before closing the modal.');
     }
   };
 
@@ -20,7 +22,7 @@ const TermsAndConditionsDialog = ({ isOpen, onClose }: { isOpen: boolean; onClos
           <Text mb={4}>
           You must read the terms and conditions before agreeing to them.
           </Text>
-          <div className="pt-4">
+          <div className="mt-4">
               <Link
                 href="/terms-and-conditions"
                 className="text-blue-500 hover:underline"
@@ -28,15 +30,18 @@ const TermsAndConditionsDialog = ({ isOpen, onClose }: { isOpen: boolean; onClos
               >
                 Terms And Conditions
               </Link>
-            </div>
+          </div>
+          <div>
+            <Checkbox
+              isChecked={isChecked}
+              onChange={(e) => setIsChecked(e.target.checked)}
 
-          <Checkbox
-            isChecked={isChecked}
-            onChange={(e) => setIsChecked(e.target.checked)}
-            className="mb-4"
-          >
-            I agree to the terms and conditions
-          </Checkbox>
+            >
+              I agree to the terms and conditions
+            </Checkbox>
+          
+          </div>
+
         </ModalBody>
 
         <ModalFooter>
